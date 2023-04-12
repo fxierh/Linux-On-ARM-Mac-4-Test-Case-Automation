@@ -1,4 +1,5 @@
-FROM registry.ci.openshift.org/openshift/release:rhel-8-release-golang-1.19-openshift-4.13
+# RHEL 8 (GNU/Linux)
+FROM registry.ci.openshift.org/ocp/4.14:tools
 
 WORKDIR /go/src/github.com/openshift/openshift-tests-private
 

@@ -3,7 +3,7 @@ version: '3.9'
 services:
   linux:
     container_name: linux
-    # Also possible: use ./images/Dockerfile instead
+    # Also possible (build is slow): use ./images/Dockerfile as dockerfile
     build:
       context: ..
       dockerfile: ./Linux-On-ARM-Mac-4-Test-Case-Automation/Dockerfile
@@ -17,7 +17,6 @@ services:
     # Also possible: COPY instead of bind mounting
     volumes:
       - /Users/fxie/Desktop/kubeconfig:/kubeconfig
-      - /Users/fxie/Projects/openshift-tests-private/Linux-On-ARM-Mac-4-Test-Case-Automation/oc-4.12.11-linux/oc:/usr/local/bin/oc
       - /Users/fxie/Projects/openshift-tests-private:/go/src/github.com/openshift/openshift-tests-private
     command: >
       bash
