@@ -6,7 +6,7 @@ services:
     # Also possible: use ./images/Dockerfile instead
     build:
       context: ..
-      dockerfile: ./Linux/Dockerfile
+      dockerfile: ./Linux-On-ARM-Mac-4-Test-Case-Automation/Dockerfile
     # docker run -i
     stdin_open: true
     # docker run -t
