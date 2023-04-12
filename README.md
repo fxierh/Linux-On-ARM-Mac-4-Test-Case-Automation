@@ -3,7 +3,7 @@ Usage:
 2. (docker login registry.ci.openshift.org)
 3. docker compose -f ./Linux-On-ARM-Mac-4-Test-Case-Automation/docker-compose.yaml up --build -d; docker compose -f ./Linux-On-ARM-Mac-4-Test-Case-Automation/docker-compose.yaml exec linux bash
 
-4. Make changes in code
+4. Make changes to openshift-test-private
 5. Outside the container: 
 GOOS=linux GOARCH=amd64 make build
 6. In the container: 
