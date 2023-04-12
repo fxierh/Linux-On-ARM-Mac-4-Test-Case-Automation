@@ -17,7 +17,7 @@ services:
     # Also possible: COPY instead of bind mounting
     volumes:
       - /Users/fxie/Desktop/kubeconfig:/kubeconfig
-      - /Users/fxie/Projects/openshift-tests-private/Linux/oc-4.12.11-linux/oc:/usr/local/bin/oc
+      - /Users/fxie/Projects/openshift-tests-private/Linux-On-ARM-Mac-4-Test-Case-Automation/oc-4.12.11-linux/oc:/usr/local/bin/oc
       - /Users/fxie/Projects/openshift-tests-private:/go/src/github.com/openshift/openshift-tests-private
     command: >
       bash
