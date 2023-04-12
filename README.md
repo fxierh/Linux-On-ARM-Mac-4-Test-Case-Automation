@@ -1,3 +1,4 @@
+Usage:
 1. (docker login registry.ci.openshift.org)
 2. docker compose -f ./Linux/docker-compose.yaml up --build -d; docker compose -f ./Linux/docker-compose.yaml exec linux bash
 
