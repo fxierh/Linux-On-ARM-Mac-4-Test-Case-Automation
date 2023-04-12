@@ -1,0 +1,23 @@
+version: '3.9'
+
+services:
+  linux:
+    container_name: linux
+    # Also possible: use ./images/Dockerfile instead
+    build:
+      context: ..
+      dockerfile: ./Linux/Dockerfile
+    # docker run -i
+    stdin_open: true
+    # docker run -t
+    tty: true
+    platform: linux/amd64
+    environment:
+      - KUBECONFIG=/kubeconfig
+    # Also possible: COPY instead of bind mounting
+    volumes:
+      - /Users/fxie/Desktop/kubeconfig:/kubeconfig
+      - /Users/fxie/Projects/openshift-tests-private/Linux/oc-4.12.11-linux/oc:/usr/local/bin/oc
+      - /Users/fxie/Projects/openshift-tests-private:/go/src/github.com/openshift/openshift-tests-private
+    command: >
+      bash
